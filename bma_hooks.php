@@ -40,7 +40,7 @@ if (!is_null($events['events'])) {
             $events["source"] = $source;
 
             $res["events"][] = $events;
-            $text = "สวัสดี ขอบคุณที่เพิ่มเรานะ\n";
+            $text = "สวัสดี ขอบคุณที่เพิ่มเรานะ";
             $text .= "รหัสของคุณคือ " . $uid;
             // Build message to reply back
             $messages = [
