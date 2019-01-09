@@ -1,12 +1,11 @@
 <?php
 
-
-
 require "vendor/autoload.php";
 
-$access_token = '3ALKAbKFoGuJyJnoDdn0HeyfbxLFtEXBKiC0lFeoNl/XbL4WhoCZzefp2n7UDuXaCWfErIDro07BnZNggJmXJChXTIlMPo8LRJ+n1LEgbRUaKehDkiCr5p5CakHrPX+gauOGX/R5bB2e5yi7xjnHDAdB04t89/1O/w1cDnyilFU=';
+$access_token = 'trDx2gTUsd/6C6EgXFRz2Cv7teEgdwxvmBaRH+YTUAfvMUJOw0npGoKhGAorYttBSIHHBnq2g1xORJVW93vJqLyebuuwyLQ3Wo5zAT7kjEdt+1GN5Rk2JwcxXE2f3IwVNNtsEVUYwe6Be21KZhPoVgdB04t89/1O/w1cDnyilFU=
+';
 
-$channelSecret = '75c03f392f6e53d662d6f5a8db9e421f';
+$channelSecret = 'ae4574b5e24f07f90859297ff4ed2b33';
 
 $pushID = 'U7ef7a449f2a5c2057eacfc02ba2eb286';
 
@@ -17,10 +16,3 @@ $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
-
-
-
-
-
-
-
