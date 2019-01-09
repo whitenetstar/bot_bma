@@ -14,4 +14,5 @@ $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channel_secret]);
 $msg = "Hello World";
 $message = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($msg);
 $uid = "U42bd564d1c5ed0adf7d5a43113a277d0";
-$response = $bot->pushMessage($uid, $message);
+// $response = $bot->pushMessage($uid, $message);
+var_dump($message);
