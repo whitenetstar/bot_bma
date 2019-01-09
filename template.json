@@ -1,0 +1,61 @@
+{
+    "type":"flex",
+    "altText": "This is first message for your friend",
+    "contents":{
+        "type": "bubble",
+        "header": {
+            "type": "box",
+            "layout": "horizontal",
+            "contents": [
+                {
+                    "type": "text",
+                    "text": "ยินดีต้อนรับ",
+                    "weight": "bold",
+                    "color": "#aaaaaa",
+                    "size": "sm"
+                }
+            ]
+        },
+        "hero": {
+            "type": "image",
+            "url": "https://bmaalert.herokuapp.com/bmabg.png",
+            "size": "full",
+            "aspectRatio": "20:13",
+            "aspectMode": "cover",
+            "action": {
+                "type": "uri",
+                "uri": "http://www.bangkok.go.th/cssd"
+            }
+        },
+        "body": {
+            "type": "box",
+            "layout": "horizontal",
+            "spacing": "md",
+            "contents": [
+                {
+                    "type": "box",
+                    "layout": "vertical",
+                    "flex": 1,
+                    "contents": [
+                        {
+                            "type": "image",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/02_1_news_thumbnail_1.png",
+                            "aspectMode": "cover",
+                            "aspectRatio": "4:3",
+                            "size": "sm",
+                            "gravity": "bottom"
+                        },
+                        {
+                            "type": "image",
+                            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/02_1_news_thumbnail_2.png",
+                            "aspectMode": "cover",
+                            "aspectRatio": "4:3",
+                            "margin": "md",
+                            "size": "sm"
+                        }
+                    ]
+                }            
+            ]
+        }  
+    } 
+}
