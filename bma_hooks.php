@@ -10,8 +10,8 @@ $access_token = 'Vc4+AyNpHxJCvzDsINZQpYx0j89Y26XWpAefFLHqIsekth8Be35Z5JtScJfXONx
 $content = file_get_contents('php://input');
 
 // Get Line Template Content
-$template = file_get_contents('template.json');
-$template = json_decode($template, true);
+// $template = file_get_contents('template.json');
+// $template = json_decode($template, true);
 // Parse JSON
 $events = json_decode($content, true);
 
@@ -43,22 +43,22 @@ if (!is_null($events['events'])) {
             $text = "สวัสดี ขอบคุณที่เพิ่มเรานะ";
             $text .= "รหัสของคุณคือ " . $uid;
             // Build message to reply back
-            $messages = [
-                'type' => 'flex',
-                'contents' => $template,
-            ];
             // $messages = [
-            //     'type'=>'text',
-            //     'text'=> $text
+            //     'type' => 'flex',
+            //     'contents' => $template,
             // ];
+            $messages = [
+                'type' => 'text',
+                'text' => $text,
+            ];
             // Make a POST Request to Messaging API to reply to sender
             $url = 'https://api.line.me/v2/bot/message/reply';
             $data = [
                 'replyToken' => $replyToken,
-                'messages' => [$template],
+                'messages' => [$messages],
             ];
             // echo json_encode($data);
-            saveFriend(json_encode($res));
+            // saveFriend(json_encode($res));
             callLine("reply", $access_token, $data);
         }
     }
